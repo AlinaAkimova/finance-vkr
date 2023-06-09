@@ -1,0 +1,16 @@
+@import '../../../../../styles/index';
+
+.font {
+  font-family: $typography-tertiary-ubuntu-light-font-family;
+  font-size: $typography-primary-font-size;
+}
+
+.addIcon {
+  gap: 1%;
+  padding-left: 2% !important;
+
+  .add {
+    color: $color-black-text;
+    opacity: 60%;
+  }
+}

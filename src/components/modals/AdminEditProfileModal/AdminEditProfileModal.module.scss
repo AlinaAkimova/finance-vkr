@@ -1,0 +1,117 @@
+@import 'src/styles';
+
+.pageName {
+  font-family: $typography-primary-light-font-family, sans-serif !important;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  .titleFont {
+    font-size: $typography-title-font-size;
+    font-family: $typography-secondary-font-size, sans-serif !important;
+  }
+}
+
+.font {
+  font-family: $typography-tertiary-ubuntu-light-font-family, sans-serif !important;
+  font-size: $typography-primary-font-size;
+  white-space: nowrap;
+}
+
+.columnBox {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  .rowBox {
+    display: flex;
+    justify-content: space-between;
+
+    .avatarLevelBox {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+
+      .avatar {
+        width: 120px;
+        height: 120px;
+        font-size: $typography-header-s-font-size;
+        font-family: $typography-primary-light-font-family, sans-serif !important;
+        margin: 0 18px 18px 0;
+      }
+    }
+
+    .textFieldBox {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      margin-left: 20px;
+      grid-row-gap: 5%;
+
+      .orangeText {
+        font-family: $typography-tertiary-ubuntu-light-font-family, sans-serif !important;
+        font-size: $typography-primary-font-size;
+        color: $color-primary;
+      }
+
+      .disabled {
+        color: $color-secondary !important;
+      }
+
+      .addIcon {
+        color: $color-primary;
+      }
+
+      .rate {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .gridBox {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+      .addRateButton {
+        width: auto;
+      }
+
+      .helperText {
+        display: flex;
+        justify-content: flex-end;
+        color: $color-black-text;
+        opacity: 0.6;
+        font-size: $typography-secondary-font-size;
+        font-family: $typography-tertiary-ubuntu-light-font-family;
+      }
+    }
+  }
+}
+
+.buttonBox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-family: $typography-secondary-regular-font-family !important;
+  margin-bottom: 15px;
+
+  .cancel {
+    color: $color-primary;
+    background-color: $color-white;
+    min-width: 25%;
+    font-family: $typography-secondary-regular-font-family !important;
+  }
+
+  .save {
+    background-color: $color-primary;
+    color: $color-white;
+    min-width: 25%;
+    font-family: $typography-secondary-regular-font-family !important;
+  }
+
+  .save:hover {
+    background-color: $color-primary-light;
+  }
+}

@@ -1,0 +1,16 @@
+@import '../../styles';
+
+.avatar {
+  bottom: 2px;
+  font-family: $typography-tertiary-ubuntu-light-font-family !important;
+}
+
+.adminStar {
+  color: $color-accent !important;
+  border-radius: 50%;
+  background-color: $color-white;
+}
+
+.starUserRoleNone {
+  display: none !important;
+}

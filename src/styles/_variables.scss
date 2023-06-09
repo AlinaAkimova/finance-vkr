@@ -1,0 +1,155 @@
+$color-primary: #f36d25;
+$color-primary-dark: #c11718;
+$color-primary-light: #f58a50;
+$color-shades-4p: #fff9f6;
+$color-shades-8p: #fef3ee;
+$color-shades-12p: #feede5;
+$color-shades-30p: #fbd3be;
+$color-shades-50p: #f9b692;
+$color-shades-red: #d32f2f;
+$color-secondary: #757575;
+$color-gray-extra-dark: #323232;
+$color-gray-dark: #666666;
+$color-gray-1: #808080;
+$color-gray-2: #9e9e9e;
+$color-gray-3: #bdbdbd;
+$color-gray-4: #e0e0e0;
+$color-gray-5: #e9e9e9;
+$color-gray-6: #0000002e;
+$color-gray-7: #171725;
+$color-gray-8: #696974;
+$color-gray-light: #ebebeb;
+$color-gray-extra-light: #f5f5f5;
+$color-text: #212121;
+$color-accent: #ffb400;
+$color-black-text: #000000;
+$color-white: #ffffff;
+$color-white-2: #ffffff01;
+$color-box-shadow-1: rgba(0, 0, 0, 0.2);
+$color-box-shadow-2: rgba(0, 0, 0, 0.14);
+$color-box-shadow-3: rgba(0, 0, 0, 0.12);
+$color-input-placeholder: #c8c8c8;
+$color-box-shadow-4: rgba(0, 0, 0, 0.06);
+$color-box-shadow-5: rgba(0, 0, 0, 0.04);
+$color-background: #fafafa;
+$color-gradient-backgroud-1: rgba(255, 255, 255, 0.5);
+$color-profile-background: rgba(0, 0, 0, 0.4);
+$color-green: #4caf50;
+$color-head-1: rgba(0, 0, 0, 0.87);
+$color-green-light-1: #4caf50;
+$color-green-light-2: #66bb6a;
+$color-green-main: #2e7d32;
+$color-yellow: #ffb400;
+$color-blue-shades-50p: #0288d180;
+$color-orange-light-shades-8p: rgba(243, 109, 37, 0.08);
+$color-orange-light: #ff9800;
+$color-orange-main: #f57c00;
+$color-red: #d32f2f;
+$color-red2: #f50057;
+$color-purple-dark: #8736ad;
+$color-blue: #56ccf2;
+$color-blue-main: #29b6f6;
+$color-dark-blue-shades: rgba(0, 8, 32, 0.87);
+$color-indigo: #536dfe;
+$color-purple-1: #cd71f9;
+$color-purple-2: #ce93d8;
+$color-purple-3: #c14ef8;
+$color-purple-dark: #9b51e0;
+$color-green: #4caf50;
+$color-green-2: #8bb558;
+$color-green-3: #a3b452;
+$color-green-4: #bdb34c;
+$color-green-5: #d9b245;
+$color-green-6: #26a69a;
+$color-orange-1: #f3b13f;
+$color-orange-2: #fea53e;
+$color-orange-3: #fc9241;
+$color-orange-4: #fa8044;
+$color-orange-5: #f86c47;
+$color-orange-6: #f44336;
+
+$typography-header-l-font-size: 96px;
+$typography-header-m-font-size: 60px;
+$typography-header-s-font-size: 48px;
+$typography-header-xs-font-size: 34px;
+$typography-title-font-size: 24px;
+$typography-subtitle-font-size: 20px;
+$typography-primary-font-size: 16px;
+$typography-header-font-size: 15px;
+$typography-secondary-font-size: 14px;
+$typography-text-font-size: 13px;
+$typography-accent-font-size: 12px;
+$typography-small-text-font-size: 10px;
+
+$typography-text-font-weight: 100;
+$typography-primary-font-weight: 300;
+$typography-secondary-font-weight: 400;
+$typography-accent-font-weight: 500;
+$typography-subtitle-font-weight: 600;
+$typography-title-font-weight: 800;
+
+$typography-title-line-height: 71px;
+
+$icon-list-icon-size: 14px;
+
+// Museo
+$typography-font-family: 'MuseoCyrl 500';
+$typography-primary-extra-light-font-family: 'MuseoCyrl 100';
+$typography-primary-light-font-family: 'MuseoCyrl 300';
+$typography-primary-regular-font-family: 'MuseoCyrl 500';
+$typography-primary-semi-bold-font-family: 'MuseoCyrl 700';
+$typography-primary-bold-font-family: 'MuseoCyrl 900';
+
+// Museo Italy
+$typography-primary-italy-extra-light-font-family: 'MuseoCyrl 100 Italic';
+$typography-primary-italy-light-font-family: 'MuseoCyrl 300 Italic';
+$typography-primary-italy-regular-font-family: 'MuseoCyrl 500 Italic';
+$typography-primary-italy-semi-bold-font-family: 'MuseoCyrl 700 Italic';
+$typography-primary-italy-bold-font-family: 'MuseoCyrl 900 Italic';
+
+// Museo Sanc
+$typography-secondary-extra-light-font-family: 'MuseoSansCyrl 100';
+$typography-secondary-light-font-family: 'MuseoSansCyrl 300';
+$typography-secondary-regular-font-family: 'MuseoSansCyrl 500';
+$typography-secondary-semi-bold-font-family: 'MuseoSansCyrl 700';
+$typography-secondary-bold-font-family: 'MuseoSansCyrl 900';
+
+// Museo Sanc Italy
+$typography-secondary-italy-extra-light-font-family: 'MuseoSansCyrl 100 Italic';
+$typography-secondary-italy-light-font-family: 'MuseoSansCyrl 300 Italic';
+$typography-secondary-italy-regular-font-family: 'MuseoSansCyrl 500 Italic';
+$typography-secondary-italy-semi-bold-font-family: 'MuseoSansCyrl 700 Italic';
+$typography-secondary-italy-bold-font-family: 'MuseoSansCyrl 900 Italic';
+
+// Ubuntu
+$typography-tertiary-ubuntu-light-font-family: 'Ubuntu-Light';
+$typography-tertiary-ubuntu-light-italic-font-family: 'Ubuntu-LightItalic';
+$typography-tertiary-ubuntu-regular-font-family: 'Ubuntu-Regular';
+$typography-tertiary-ubuntu-italic-font-family: 'Ubuntu-RegularItalic';
+$typography-tertiary-ubuntu-medium-font-family: 'Ubuntu-Medium';
+$typography-tertiary-ubuntu-medium-italic-font-family: 'Ubuntu-MediumItalic';
+$typography-tertiary-ubuntu-bold-font-family: 'Ubuntu-Bold';
+$typography-tertiary-ubuntu-bold-italic-font-family: 'Ubuntu-BoldItalic';
+
+// - desktop
+$bp-val-desktop: 1400;
+$bp-val-small-desktop: 1200;
+$bp-val-desktop-height: 900;
+// - ipad
+$bp-val-tablet: 775;
+$bp-val-table-height: 1024;
+$bp-val-tablet-landscape: 1024;
+// - mobile
+$bp-val-mobile: 375;
+$bp-val-mobile-height: 812;
+$bt-val-mobile-max-width: 550;
+$bt-val-big-mobile-max-width: 450;
+
+$bp-mobile: #{$bp-val-mobile}px;
+$bp-below-tablet: #{$bt-val-mobile-max-width}px;
+$bp-tablet: #{$bp-val-tablet-landscape}px;
+$bp-tablet-small: #{$bp-val-tablet}px;
+$bp-mobile-big: #{$bt-val-big-mobile-max-width}px;
+$bp-small-desktop: #{$bp-val-small-desktop}px;
+$bp-desktop: #{$bp-val-desktop}px;
+$bp-desktop-only: #{$bp-val-tablet-landscape + 1}px;

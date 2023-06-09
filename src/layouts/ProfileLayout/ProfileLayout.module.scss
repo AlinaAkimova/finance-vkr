@@ -1,0 +1,18 @@
+@import '../../styles';
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paper {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-white;
+  padding: 30px;
+  max-width: 570px;
+  border-radius: 4px;
+  box-shadow: 0 8px 10px -5px $color-box-shadow-1,
+    0 16px 24px 2px $color-box-shadow-2, 0 6px 30px 5px $color-box-shadow-3;
+}

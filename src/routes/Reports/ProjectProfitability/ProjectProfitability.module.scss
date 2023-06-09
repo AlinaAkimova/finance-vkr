@@ -1,0 +1,11 @@
+@import 'src/styles';
+
+.mg {
+  margin-bottom: 30px;
+  .columnView {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}

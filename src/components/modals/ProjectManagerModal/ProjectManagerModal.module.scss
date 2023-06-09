@@ -1,0 +1,131 @@
+@import 'src/styles';
+
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-profile-background;
+  min-width: 100%;
+  min-height: 100%;
+  font-family: $typography-primary-light-font-family, sans-serif !important;
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  top: 0;
+  left: 0;
+
+  .Paper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: $color-white;
+    padding: 20px 30px 10px 30px;
+    max-width: 570px;
+  }
+}
+
+.mainContainerIsClosed {
+  display: none;
+}
+
+.list {
+  position: 'relative';
+  max-height: 200px;
+
+  li {
+    &::before {
+      display: none;
+    }
+    padding: 0;
+  }
+
+  ul {
+    padding: 0;
+  }
+}
+
+.pageName {
+  font-family: $typography-primary-light-font-family, sans-serif !important;
+}
+
+.customGridBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 30px;
+}
+
+.gridBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 15px;
+}
+
+.choosenField {
+  color: $color-orange-main !important;
+}
+
+.textFieldBox {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  font-family: $typography-tertiary-ubuntu-light-font-family, sans-serif !important;
+  font-size: $typography-header-xs-font-size;
+  min-width: 400px;
+
+  .font {
+    font-family: $typography-tertiary-ubuntu-light-font-family, sans-serif !important;
+    font-size: $typography-primary-font-size;
+  }
+
+  .chipColor {
+    border-radius: 16px;
+    background-color: $color-purple-1;
+    color: $color-white;
+  }
+}
+
+.buttonBox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-family: $typography-primary-light-font-family, sans-serif !important;
+  margin-bottom: 15px;
+
+  .cancel {
+    color: $color-primary;
+    background-color: $color-white;
+    min-width: 25%;
+    font-family: $typography-primary-light-font-family, sans-serif !important;
+  }
+
+  .save {
+    background-color: $color-primary-light;
+    color: $color-white;
+    min-width: 25%;
+    font-family: $typography-primary-light-font-family, sans-serif !important;
+
+    &:hover {
+      background-color: $color-primary;
+    }
+  }
+}
+
+.colorBlack {
+  color: $color-black-text !important;
+}
+
+.colorRed {
+  color: $color-red !important;
+}
+
+.colorBlue {
+  color: $color-blue-main !important;
+}
+
+.colorPurple {
+  color: $color-purple-dark !important;
+}

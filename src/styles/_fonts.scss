@@ -1,0 +1,199 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap';
+@mixin font(
+  $font-family,
+  $font-file,
+  $font-weight: normal,
+  $font-style: normal,
+  $font-display: auto
+) {
+  @font-face {
+    font-family: $font-family;
+    src: url($font-file + '.eot') format('eot'),
+      url($font-file + '.woff') format('woff'),
+      url($font-file + '.ttf') format('truetype'),
+      url($font-file + '.otf') format('otf');
+    font-weight: $font-weight;
+    font-style: $font-style;
+    font-display: $font-display;
+  }
+}
+
+// MuseoCyrillic
+@include font(
+  'MuseoCyrl 100',
+  '../assets/fonts/MuseoCyrillic/MuseoCyrl-100',
+  100,
+  normal
+);
+@include font(
+  'MuseoCyrl 100 Italic',
+  '../assets/fonts/MuseoCyrillic/MuseoCyrl-100Italic',
+  100,
+  italic
+);
+
+@include font(
+  'MuseoCyrl 300',
+  '../assets/fonts/MuseoCyrillic/MuseoCyrl-300',
+  300,
+  normal
+);
+@include font(
+  'MuseoCyrl 300 Italic',
+  '../assets/fonts/MuseoCyrillic/MuseoCyrl-300Italic',
+  300,
+  italic
+);
+
+@include font(
+  'MuseoCyrl 500',
+  '../assets/fonts/MuseoCyrillic/MuseoCyrl-500',
+  500,
+  normal
+);
+@include font(
+  'MuseoCyrl 500 Italic',
+  '../assets/fonts/MuseoCyrillic/MuseoCyrl-500Italic',
+  500,
+  italic
+);
+
+@include font(
+  'MuseoCyrl 700',
+  '../assets/fonts/MuseoCyrillic/MuseoCyrl-700',
+  700,
+  normal
+);
+@include font(
+  'MuseoCyrl 700 Italic',
+  '../assets/fonts/MuseoCyrillic/MuseoCyrl-700Italic',
+  700,
+  italic
+);
+
+@include font(
+  'MuseoCyrl 900',
+  '../assets/fonts/MuseoCyrillic/MuseoCyrl-900',
+  900,
+  normal
+);
+@include font(
+  'MuseoCyrl 900 Italic',
+  '../assets/fonts/MuseoCyrillic/MuseoCyrl-900Italic',
+  900,
+  italic
+);
+
+// MuseoSancCyrl
+@include font(
+  'MuseoSansCyrl 100',
+  '../assets/fonts/MuseoSansCyrl/MuseoSansCyrl-100',
+  100,
+  normal
+);
+@include font(
+  'MuseoSansCyrl 100 Italic',
+  '../assets/fonts/MuseoSansCyrl/MuseoSansCyrl-100Italic',
+  100,
+  italic
+);
+
+@include font(
+  'MuseoSansCyrl 300',
+  '../assets/fonts/MuseoSansCyrl/MuseoSansCyrl-300',
+  300,
+  normal
+);
+@include font(
+  'MuseoSansCyrl 300 Italic',
+  '../assets/fonts/MuseoSansCyrl/MuseoSansCyrl-300Italic',
+  300,
+  italic
+);
+
+@include font(
+  'MuseoSansCyrl 500',
+  '../assets/fonts/MuseoSansCyrl/MuseoSansCyrl-500',
+  500,
+  normal
+);
+@include font(
+  'MuseoSansCyrl 500 Italic',
+  '../assets/fonts/MuseoSansCyrl/MuseoSansCyrl-500Italic',
+  500,
+  italic
+);
+
+@include font(
+  'MuseoSansCyrl 700',
+  '../assets/fonts/MuseoSansCyrl/MuseoSansCyrl-700',
+  700,
+  normal
+);
+@include font(
+  'MuseoSansCyrl 700 Italic',
+  '../assets/fonts/MuseoSansCyrl/MuseoSansCyrl-700Italic',
+  700,
+  italic
+);
+
+@include font(
+  'MuseoSansCyrl 900',
+  '../assets/fonts/MuseoSansCyrl/MuseoSansCyrl-900',
+  900,
+  normal
+);
+@include font(
+  'MuseoSansCyrl 900 Italic',
+  '../assets/fonts/MuseoSansCyrl/MuseoSansCyrl-900Italic',
+  900,
+  italic
+);
+
+// Ubuntu
+@include font(
+  'Ubuntu-Light',
+  '../assets/fonts/Ubuntu/Ubuntu-Light',
+  300,
+  normal
+);
+@include font(
+  'Ubuntu-LightItalic',
+  '../assets/fonts/Ubuntu/Ubuntu-LightItalic',
+  300,
+  italic
+);
+
+@include font(
+  'Ubuntu-Regular',
+  '../assets/fonts/Ubuntu/Ubuntu-Regular',
+  400,
+  normal
+);
+@include font(
+  'Ubuntu-RegularItalic',
+  '../assets/fonts/Ubuntu/Ubuntu-Italic',
+  400,
+  italic
+);
+
+@include font(
+  'Ubuntu-Medium',
+  '../assets/fonts/Ubuntu/Ubuntu-Medium',
+  500,
+  normal
+);
+@include font(
+  'Ubuntu-MediumItalic',
+  '../assets/fonts/Ubuntu/Ubuntu-MediumItalic',
+  500,
+  italic
+);
+
+@include font('Ubuntu-Bold', '../assets/fonts/Ubuntu/Ubuntu-Bold', 700, normal);
+@include font(
+  'Ubuntu-BoldItalic',
+  '../assets/fonts/Ubuntu/Ubuntu-BoldItalic',
+  700,
+  italic
+);

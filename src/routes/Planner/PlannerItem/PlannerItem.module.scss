@@ -1,0 +1,25 @@
+@import '../../../styles';
+
+.weeks {
+  .projects {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .userItem {
+    height: 64px;
+    width: 100%;
+    display: flex;
+    border: 1px solid $color-gray-4;
+    border-top: none;
+    border-bottom: none;
+
+    :nth-last-child(1) {
+      border: none;
+    }
+  }
+}
+
+.removeItem {
+  display: none !important;
+}

@@ -1,0 +1,37 @@
+@import 'src/styles';
+
+.boxWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: $color-white;
+  border: 1px solid $color-gray-4;
+  min-height: 120px;
+  min-width: 244px;
+  margin-bottom: 30px;
+
+  .title {
+    color: $color-gray-7;
+    font-size: $typography-primary-font-size;
+    font-family: $typography-tertiary-ubuntu-regular-font-family;
+  }
+
+  .moneyLine {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+
+    .money {
+      margin-right: 5px;
+      font-size: $typography-title-font-size;
+      font-family: $typography-tertiary-ubuntu-regular-font-family;
+    }
+  }
+  .description {
+    font-size: $typography-secondary-font-size;
+    color: $color-gray-8;
+    font-family: $typography-tertiary-ubuntu-regular-font-family;
+  }
+}

@@ -1,0 +1,12 @@
+@import 'src/styles';
+
+.wrapper {
+  background-color: $color-background;
+  min-height: 115vh;
+
+  .tableView {
+    display: flex;
+    justify-content: center;
+    margin: 0 4% 2%;
+  }
+}

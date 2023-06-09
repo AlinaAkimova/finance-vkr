@@ -1,0 +1,51 @@
+@import '../../../styles';
+
+.wrapper {
+  height: 30%;
+  width: 463px;
+
+  .titleContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+      font-family: $typography-primary-regular-font-family;
+      font-size: $typography-title-font-size;
+      color: $color-primary;
+    }
+
+    .icon {
+      color: $color-primary;
+    }
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    margin-top: 13%;
+    font-family: $typography-tertiary-ubuntu-light-font-family;
+    font-size: $typography-primary-font-size;
+  }
+
+  .buttonBox {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 15% 2% 0 0;
+
+    .cancel {
+      color: $color-primary;
+      background-color: $color-white;
+      font-family: $typography-secondary-regular-font-family !important;
+      padding: 2% 13% 2% 13%;
+    }
+
+    .yes {
+      background-color: $color-primary;
+      color: $color-white;
+      font-family: $typography-secondary-regular-font-family !important;
+      padding: 2% 13% 2% 13%;
+    }
+  }
+}

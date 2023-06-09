@@ -1,0 +1,52 @@
+@import 'src/styles';
+
+.pageName {
+  display: flex;
+  align-items: center;
+  font-family: $typography-primary-light-font-family, sans-serif !important;
+  margin-bottom: 20px;
+}
+
+.textFieldBox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  font-family: $typography-tertiary-ubuntu-light-font-family, sans-serif !important;
+  font-size: $typography-header-xs-font-size;
+  max-width: 400px;
+
+  .font {
+    font-family: $typography-tertiary-ubuntu-light-font-family, sans-serif !important;
+    font-size: $typography-secondary-font-size;
+  }
+
+  .gridBox {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+  }
+}
+
+.buttonBox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-family: $typography-primary-light-font-family, sans-serif !important;
+  margin-bottom: 15px;
+
+  .cancel {
+    color: $color-primary;
+    background-color: $color-white;
+    min-width: 25%;
+    font-family: $typography-primary-light-font-family, sans-serif !important;
+  }
+
+  .save {
+    background-color: $color-primary;
+    color: $color-white;
+    min-width: 25%;
+    font-family: $typography-primary-light-font-family, sans-serif !important;
+  }
+}

@@ -1,0 +1,144 @@
+@import 'src/styles';
+
+.container {
+  position: absolute;
+  right: 0;
+  margin: 54px 150px 0 0;
+  width: 500px;
+  height: 440px;
+  z-index: 10;
+  background: $color-white;
+  box-shadow: 0px 2px 1px -1px $color-box-shadow-1,
+    0px 1px 1px $color-box-shadow-2, 0px 1px 3px $color-box-shadow-3;
+  border-radius: 4px;
+
+  .main {
+    display: flex;
+    width: 100%;
+    height: 358px;
+
+    .sidebar {
+      width: 176px;
+      border-right: 1px dashed $color-gray-4;
+      padding: 8px 4px;
+
+      .list {
+        list-style-type: none !important;
+        margin: 0;
+
+        div::before {
+          display: none;
+        }
+        div {
+          cursor: pointer;
+          margin: 0;
+          width: 160px;
+          height: 32px;
+          border-radius: 4px;
+          padding: 6px 16px;
+
+          p {
+            font-family: $typography-tertiary-ubuntu-light-font-family;
+            font-style: normal;
+            font-weight: $typography-primary-font-weight;
+            font-size: $typography-secondary-font-size;
+            line-height: 143%;
+            letter-spacing: 0.17px;
+            color: $color-head-1;
+          }
+        }
+        div:hover {
+          background: $color-shades-12p;
+        }
+
+        .active {
+          background: $color-shades-12p;
+        }
+      }
+    }
+
+    .dates {
+      padding: 24px;
+      width: calc(100% - 176px);
+
+      .inputs {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        padding-bottom: 20px;
+      }
+
+      .inputs > p {
+        margin: 0;
+        font-family: $typography-tertiary-ubuntu-regular-font-family;
+        font-weight: $typography-secondary-font-weight;
+        font-size: 18px;
+        color: $color-dark-blue-shades;
+      }
+
+      .inputs > input {
+        cursor: initial;
+        width: 112px;
+        height: 27px;
+        text-align: center;
+        padding: 0;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid $color-primary;
+
+        font-family: $typography-tertiary-ubuntu-medium-font-family;
+        font-weight: $typography-secondary-font-weight;
+        font-size: 16px;
+        letter-spacing: 0.15px;
+        color: $color-dark-blue-shades;
+      }
+    }
+  }
+
+  .footer {
+    width: 100%;
+    height: 82px;
+    border-top: 1px solid $color-gray-4;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    padding: 0;
+    justify-content: flex-end !important;
+
+    button {
+      margin: 0;
+      padding: 0;
+      width: 150px;
+      height: 42px;
+      border-radius: 4px;
+
+      font-family: $typography-secondary-light-font-family;
+      font-style: normal;
+      font-weight: $typography-secondary-font-weight;
+      font-size: 15px;
+      line-height: 26px;
+
+      letter-spacing: 0.46px;
+      text-transform: uppercase;
+
+      border: none;
+      margin-top: 16px;
+      background: $color-white;
+      color: $color-primary;
+
+      &:nth-child(2) {
+        box-shadow: 0px 3px 1px -2px $color-box-shadow-1,
+          0px 2px 2px $color-box-shadow-2, 0px 1px 5px $color-box-shadow-3;
+        background: $color-primary-light;
+        color: $color-white;
+        margin-right: 30px;
+
+        &:hover {
+          background: $color-primary;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+@import '../../../styles';
+
+.userItem {
+  height: 100%;
+  display: flex;
+  background-color: $color-white;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+
+  .textItem {
+    display: flex;
+    flex-direction: column;
+
+    .name {
+      font-family: $typography-tertiary-ubuntu-light-font-family;
+      margin: 0;
+    }
+
+    .role {
+      color: $color-gray-dark;
+      font-size: $typography-accent-font-size;
+      margin: 0;
+    }
+  }
+
+  .star {
+    color: $color-accent;
+  }
+
+  .avatar {
+    font-family: $typography-tertiary-ubuntu-light-font-family;
+  }
+
+
+  .buttonDot {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    height: max-content !important;
+    min-height: 10px !important;
+    margin: 0 0 0 20px;
+
+    :hover {
+      border-radius: 100px;
+      background-color: $color-orange-light-shades-8p;
+
+      :last-child {
+        color: $color-orange-5 !important;
+      }
+    }
+
+    .dot {
+      color: $color-gray-4;
+      display: flex;
+      align-items: center;
+
+      :hover {
+        border-radius: 100px;
+        background-color: $color-orange-light-shades-8p;
+        color: $color-orange-5 !important;
+      }
+    }
+  }
+}

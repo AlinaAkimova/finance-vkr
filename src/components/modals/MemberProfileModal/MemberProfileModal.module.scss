@@ -1,0 +1,59 @@
+@import '../../../styles';
+
+.pageName {
+  margin-bottom: 17px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.mainBox {
+  display: flex;
+  justify-content: space-between;
+
+  .avatar {
+    background-color: $color-purple-2;
+    width: 150px;
+    height: 150px;
+    font-size: $typography-header-s-font-size;
+    font-family: $typography-primary-light-font-family, sans-serif !important;
+  }
+
+  .textFieldBox {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    flex-direction: column;
+    font-family: $typography-primary-light-font-family, sans-serif !important;
+
+    .font {
+      font-family: $typography-tertiary-ubuntu-light-font-family, sans-serif !important;
+      font-size: $typography-secondary-font-size;
+    }
+
+    .orangeText {
+      font-family: $typography-tertiary-ubuntu-light-font-family, sans-serif !important;
+      font-size: $typography-secondary-font-size;
+      color: $color-primary;
+    }
+
+    .gridBox {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  .inviteButton {
+    background-color: $color-primary;
+    color: $color-white;
+    min-width: 60%;
+    font-family: $typography-primary-light-font-family, sans-serif !important;
+  }
+}

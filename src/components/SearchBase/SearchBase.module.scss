@@ -1,0 +1,42 @@
+@import '../../styles';
+
+.openBase {
+  ::placeholder {
+    font-family: $typography-tertiary-ubuntu-light-font-family !important;
+    font-size: $typography-secondary-font-size;
+  }
+}
+
+.closeBase {
+  display: none;
+
+  ::placeholder {
+    color: transparent !important;
+  }
+}
+
+.openBackground {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-black-text;
+  opacity: 0.4;
+  min-width: 100vw;
+  min-height: 120vh;
+  position: absolute;
+  margin-top: 70px;
+  z-index: 100;
+  right: 0;
+  top: 0;
+}
+
+.closeBackground {
+  display: none;
+}
+
+.font {
+  font-family: $typography-tertiary-ubuntu-light-font-family !important;
+  font-size: $typography-secondary-font-size !important;
+  color: $color-black-text !important;
+  opacity: 0.6;
+}

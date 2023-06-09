@@ -1,0 +1,140 @@
+@import 'src/styles';
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+
+  .container {
+    border-radius: 4px 4px 0 0;
+    border-top: 1px solid $color-gray-4;
+    border-left: 1px solid $color-gray-4;
+    border-right: 1px solid $color-gray-4;
+    background-color: $color-white;
+
+    .table {
+      overflow: hidden;
+    }
+
+    .tableCellHeadNumber {
+      width: 3%;
+      background-color: $color-gray-extra-light;
+      font-family: $typography-secondary-regular-font-family, sans-serif;
+    }
+
+    .tableCellHead {
+      background-color: $color-gray-extra-light;
+      font-family: $typography-tertiary-ubuntu-regular-font-family, sans-serif;
+    }
+
+    .tableCellDefaultRate {
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      .currencyRuble {
+        color: $color-black-text;
+        opacity: 0.54;
+        width: 20px;
+      }
+    }
+
+    .tableBody {
+      height: auto;
+    }
+
+    .tableBodyLoading {
+      height: 600px;
+      position: relative;
+    }
+
+    .tableRowOnClick {
+      background-color: $color-orange-light-shades-8p !important;
+    }
+
+    .tableRow {
+      cursor: pointer;
+    }
+
+    .inactiveRow {
+      background-color: $color-box-shadow-5;
+      color: $color-black-text !important;
+      opacity: 0.38;
+    }
+
+    .inactiveChip {
+      background-color: $color-black-text !important;
+      opacity: 0.3;
+    }
+
+    .typography {
+      font-family: $typography-tertiary-ubuntu-light-font-family, sans-serif !important;
+    }
+
+    .stars {
+      display: none;
+    }
+
+    .starUserRole {
+      display: block;
+      color: $color-accent;
+    }
+
+    .starAdmin {
+      border-radius: 50%;
+      background-color: $color-white;
+    }
+
+    .projectColor {
+      color: $color-purple-1;
+    }
+
+    .chipTypography {
+      color: $color-white;
+      font-family: $typography-tertiary-ubuntu-light-font-family, sans-serif !important;
+    }
+
+    .intern {
+      background-color: $color-green-main;
+    }
+
+    .junior {
+      background-color: $color-blue-shades-50p;
+    }
+
+    .middle {
+      background-color: $color-orange-light;
+    }
+
+    .highMiddle {
+      background-color: $color-red;
+    }
+
+    .senior {
+      background-color: $color-purple-dark;
+    }
+
+    .pa {
+      background-color: $color-blue-main;
+    }
+
+    .qa {
+      background-color: $color-indigo;
+    }
+
+    .design {
+      background-color: $color-purple-dark;
+    }
+
+    .react {
+      background-color: $color-green-light-2;
+    }
+
+    .nodejs {
+      background-color: $color-orange-main;
+    }
+
+    .fullstack {
+      background-color: $color-purple-1;
+    }
+  }
+}

@@ -1,0 +1,111 @@
+@import 'styles';
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 594px;
+  border: none;
+  background-color: $color-shades-4p;
+  border-radius: 5px;
+  padding: 32px;
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 15px;
+
+    .element {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .name {
+        color: $color-black-text;
+        opacity: 0.6;
+        font-family: $typography-tertiary-ubuntu-light-font-family;
+        font-size: $typography-primary-font-size;
+        font-weight: $typography-primary-font-weight;
+        white-space: nowrap;
+        width: 32%;
+      }
+
+      .selectedName {
+        color: $color-primary;
+        opacity: 1;
+      }
+
+      .textField {
+        width: 68%;
+      }
+    }
+
+    .elementMultiple {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      .wrapper {
+        display: flex;
+        gap: 10px;
+
+        .smallName {
+          color: $color-black-text;
+          opacity: 0.6;
+          font-family: $typography-tertiary-ubuntu-light-font-family;
+          font-size: $typography-primary-font-size;
+          font-weight: $typography-primary-font-weight;
+          white-space: nowrap;
+        }
+
+        .selectedName {
+          color: $color-primary;
+          opacity: 1;
+        }
+
+        .smallTextField {
+          width: 70%;
+        }
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-top: 40px;
+
+    .cancel {
+      width: 150px;
+      height: 42px;
+      color: $color-primary;
+      font-family: $typography-secondary-regular-font-family !important;
+    }
+
+    .save {
+      width: 150px;
+      background-color: $color-primary-light;
+      font-family: $typography-secondary-regular-font-family !important;
+      color: $color-white;
+      height: 10%;
+      padding: 2% 13% 2% 13%;
+
+      &:hover {
+        background-color: $color-primary;
+      }
+    }
+  }
+}

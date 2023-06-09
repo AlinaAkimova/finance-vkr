@@ -1,0 +1,103 @@
+@import 'styles';
+
+.wrapper {
+  border-radius: 4px;
+  min-width: 463px;
+  font-family: $typography-primary-extra-light-font-family;
+  font-size: $typography-title-font-size;
+  font-weight: $typography-title-font-weight;
+
+  .headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $color-primary;
+    margin-bottom: 8%;
+  }
+
+  .close {
+    color: $color-primary;
+  }
+
+  .font {
+    font-family: $typography-tertiary-ubuntu-light-font-family;
+    color: $color-black-text;
+    opacity: 0.87;
+  }
+
+  .name {
+    color: $color-black-text;
+    opacity: 0.6;
+    font-family: $typography-tertiary-ubuntu-light-font-family;
+    font-size: $typography-primary-font-size;
+    font-weight: $typography-primary-font-weight;
+    white-space: nowrap;
+  }
+
+  .selectedName {
+    color: $color-primary;
+    opacity: 1;
+  }
+
+  .gridBox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .colorRed {
+    color: $color-red2 !important;
+    padding: 2px;
+  }
+
+  .colorBlue {
+    color: $color-blue;
+  }
+
+  .colorOrange {
+    color: $color-primary;
+  }
+
+  .colorLightGreen {
+    color: $color-green;
+  }
+
+  .colorGreen {
+    color: $color-green-6;
+  }
+
+  .colorPurple {
+    color: $color-purple-dark;
+  }
+
+  .colorLightPurple {
+    color: $color-purple-3;
+  }
+
+  .colorIndigo {
+    color: $color-indigo;
+  }
+
+  .colorYellow {
+    color: $color-yellow;
+  }
+
+  .buttonBox {
+    display: flex;
+    margin: 9% 0 3% 0;
+    justify-content: space-around;
+
+    .buttonWithoutBorders {
+      color: $color-primary;
+      font-family: $typography-secondary-regular-font-family !important;
+    }
+
+    .save {
+      background-color: $color-primary;
+      font-family: $typography-secondary-regular-font-family !important;
+      color: $color-white;
+      height: 10%;
+      padding: 2% 13% 2% 13%;
+    }
+  }
+}

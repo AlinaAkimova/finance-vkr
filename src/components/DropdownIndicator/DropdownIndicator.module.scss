@@ -1,0 +1,12 @@
+@import 'src/styles';
+
+.arrows {
+  color: $color-black-text;
+  opacity: 0.38;
+  position: relative;
+  left: 4px;
+}
+
+.arrowNone {
+  display: none !important;
+}

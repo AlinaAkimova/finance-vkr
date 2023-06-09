@@ -1,0 +1,62 @@
+@import 'styles';
+
+.nameContainer {
+  margin-bottom: 20px;
+}
+
+.textFieldBox {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  font-family: $typography-tertiary-ubuntu-light-font-family, sans-serif !important;
+  font-size: $typography-header-xs-font-size;
+  max-width: 450px;
+
+  .gridBox {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .font {
+    font-family: $typography-tertiary-ubuntu-light-font-family, sans-serif !important;
+    font-size: $typography-secondary-font-size;
+  }
+
+  .orangeText {
+    font-family: $typography-tertiary-ubuntu-light-font-family, sans-serif !important;
+    font-size: $typography-secondary-font-size;
+    color: $color-primary;
+  }
+
+  .project {
+    background-color: $color-white;
+    border-radius: 16px;
+    margin-right: 5px;
+  }
+}
+
+.buttonBox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-family: $typography-primary-light-font-family, sans-serif !important;
+
+  .cancel {
+    color: $color-primary;
+    background-color: $color-white;
+    min-width: 25%;
+    font-family: $typography-primary-light-font-family, sans-serif !important;
+  }
+
+  .save {
+    background-color: $color-primary;
+    color: $color-white;
+    min-width: 25%;
+    font-family: $typography-primary-light-font-family, sans-serif !important;
+  }
+
+  .save:hover {
+    background-color: $color-primary-light;
+  }
+}

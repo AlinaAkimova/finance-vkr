@@ -1,0 +1,21 @@
+@import 'src/styles';
+
+.wrapper {
+  background-color: $color-background;
+  min-height: 115vh;
+  position: relative;
+  overflow: hidden;
+
+  .tableView {
+    display: flex;
+    justify-content: center;
+    margin: 0 4% 2%;
+  }
+
+  .inactiveComponent {
+    color: $color-white;
+    font-family: $typography-tertiary-ubuntu-light-font-family, sans-serif !important;
+    background-color: $color-black-text !important;
+    opacity: 0.38;
+  }
+}

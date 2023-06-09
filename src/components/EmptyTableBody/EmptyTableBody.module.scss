@@ -1,0 +1,20 @@
+@import '../../styles';
+
+.emptyRows {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+
+  .emptyRowsText {
+    padding-top: 2%;
+    display: flex;
+    font-size: $typography-subtitle-font-size;
+    font-weight: $typography-secondary-font-weight;
+    text-align: center;
+    color: $color-black-text;
+    opacity: 0.38;
+    white-space: nowrap;
+  }
+}

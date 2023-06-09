@@ -1,0 +1,23 @@
+@import '../../styles';
+
+.button {
+  color: $color-white;
+  background-color: $color-primary !important;
+  z-index: 1;
+
+  .addIcon {
+    position: relative;
+    right: 4px;
+    width: 19px;
+  }
+
+  .text {
+    white-space: nowrap;
+    font-family: $typography-tertiary-ubuntu-regular-font-family !important;
+  }
+}
+
+.button:hover {
+  background-color: $color-primary-light;
+  color: $color-white;
+}

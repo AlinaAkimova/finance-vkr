@@ -1,0 +1,111 @@
+@import 'src/styles/variables';
+@import 'src/styles/breakpoints';
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.root {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $typography-primary-extra-light-font-family;
+}
+
+.paper {
+  width: 30%;
+  padding: 5px 16px 16px;
+  box-shadow: 0 5px 5px -3px $color-box-shadow-1,
+    0 8px 10px 1px $color-box-shadow-2, 0 3px 14px 2px $color-box-shadow-3;
+  border-radius: 4px;
+
+  @include small-tablet {
+    width: 70%;
+
+    @include mobile(767px) {
+      width: 100%;
+    }
+  }
+}
+
+.formWrapper {
+  font-family: $typography-primary-light-font-family;
+  background-blend-mode: hard-light, lighten, hard-light;
+  background: $color-gray-5;
+}
+
+.submitBtn {
+  width: 100%;
+  font-family: $typography-primary-light-font-family !important;
+  font-weight: $typography-accent-font-weight !important;
+  font-size: $typography-primary-font-size !important;
+  letter-spacing: 1px;
+  box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px rgb(0 0 0 / 14%),
+    0 1px 5px rgb(0 0 0 / 12%);
+  border-radius: 4px;
+  height: 45px;
+  text-transform: uppercase !important;
+  color: $color-white !important;
+}
+
+.headForm {
+  width: auto;
+  align-items: center;
+}
+
+div {
+  font-family: $typography-primary-light-font-family;
+}
+
+.logoIcon {
+  width: 64px;
+  height: 64px;
+}
+
+.head {
+  font-weight: $typography-subtitle-font-weight;
+  font-size: $typography-title-font-size;
+  line-height: 133%;
+  color: $color-head-1;
+  margin-top: 14px;
+  margin-bottom: 30px;
+}
+
+.postScript {
+  font-size: $typography-secondary-font-size;
+  letter-spacing: 0.17px;
+  font-weight: $typography-primary-font-weight;
+}
+
+.form {
+  margin-top: 20px;
+
+  .label {
+    font-family: $typography-primary-light-font-family;
+  }
+
+  .outlinedInput {
+    font-family: $typography-primary-light-font-family;
+  }
+}
+
+.forgotPassword {
+  font-weight: $typography-primary-font-weight;
+  font-size: $typography-secondary-font-size;
+  line-height: 143%;
+  letter-spacing: 0.17px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.checkBoxPassword {
+  font-style: normal;
+  font-weight: $typography-primary-font-weight;
+  font-size: $typography-primary-font-size;
+  line-height: 150%;
+  letter-spacing: 0.15px;
+  color: $color-head-1;
+}

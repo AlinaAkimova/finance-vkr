@@ -1,0 +1,23 @@
+@import '../../styles';
+
+.button {
+  font-family: $typography-secondary-extra-light-font-family !important;
+  font-size: $typography-text-font-size;
+  font-weight: $typography-title-font-weight !important;
+  max-width: 38px !important;
+  min-width: 38px !important;
+  max-height: 30px !important;
+  min-height: 30px !important;
+  color: $color-black-text !important;
+}
+
+.buttonInactive {
+  border: 1px solid $color-black-text !important;
+  color: $color-black-text !important;
+  opacity: 0.38;
+}
+
+.buttonActive {
+  border: 1px solid $color-primary !important;
+  color: $color-primary !important;
+}

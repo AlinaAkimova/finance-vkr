@@ -1,0 +1,121 @@
+@import '../../styles';
+
+.menu {
+  display: flex;
+  border-radius: 0;
+
+  .longHeader {
+    flex: 1;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  width: auto;
+  padding-right: 14px;
+  padding-top: 20px;
+  background-color: transparent;
+  align-items: center;
+
+  .logo {
+    flex-shrink: 0;
+    color: $color-text;
+    margin-left: 20px;
+  }
+
+  .title {
+    font-family: $typography-primary-regular-font-family !important;
+    font-size: $typography-primary-font-size;
+    color: $color-gray-extra-dark;
+    padding-bottom: 3px;
+  }
+
+  .openButton {
+    min-width: initial;
+    padding: 8px;
+    margin-left: 10px;
+    border-radius: 20px;
+    color: $color-gray-2 !important;
+    background-color: transparent;
+
+    &:hover {
+      background-color: $color-gray-4;
+    }
+
+    .openIcon {
+      color: $color-gray-1 !important;
+    }
+
+    .closeIcon {
+      color: $color-gray-2 !important;
+    }
+  }
+}
+
+.list {
+  margin: 0 !important;
+  padding: 0 !important;
+
+  .subHeader {
+    font-family: $typography-secondary-semi-bold-font-family;
+    font-size: $typography-secondary-font-size;
+    color: $color-gray-2;
+    padding: 20px 0 10px 20px;
+  }
+
+  .icon {
+    color: $color-gray-dark;
+  }
+
+  .itemText {
+    font-family: $typography-primary-light-font-family !important;
+    font-size: $typography-primary-font-size;
+    display: inline;
+    margin: 0;
+    overflow-x: hidden;
+    color: $color-text;
+    white-space: nowrap;
+    min-width: 126px;
+  }
+
+  .reverseItem {
+    transform: rotate(180deg);
+  }
+
+  .itemButton {
+    margin: 10px 8px 10px 8px !important;
+    padding: 10px 0 10px 12px !important;
+    border-radius: 4px;
+
+    .chip {
+      height: auto;
+      color: $color-white;
+      background-color: #c14ef8;
+    }
+
+    .badge {
+      color: #c14ef8;
+    }
+  }
+
+  .activeButton {
+    background-color: $color-shades-12p;
+  }
+
+  .subItemButton {
+    margin: 0 14px 0 0 !important;
+    padding: 10px 10px 10px 40px !important;
+    width: 100%;
+    border-bottom: 1px solid $color-gray-light !important;
+  }
+}
+
+.deleteItem {
+  display: none !important;
+}
+
+.openedPage {
+  color: $color-primary !important;
+}

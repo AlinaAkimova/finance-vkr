@@ -1,0 +1,65 @@
+@import '../../../styles';
+
+.wrapper {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 3%;
+  cursor: pointer;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  z-index: 10;
+
+  .paper {
+    height: auto;
+    width: 18%;
+    min-width: 100px;
+    box-shadow: 0 5px 5px -3px $color-box-shadow-1,
+      0 8px 10px 1px $color-box-shadow-2, 0 3px 14px 2px $color-box-shadow-3;
+    border-radius: 0 0 4px 4px;
+    background-color: $color-white;
+    position: absolute;
+    z-index: 20 !important;
+    padding-bottom: 0.8%;
+
+    .avatarName {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid $color-box-shadow-3;
+      gap: 5%;
+      padding: 6% 0 3% 5%;
+
+      .name {
+        font-family: $typography-primary-light-font-family;
+        font-size: $typography-secondary-font-size;
+      }
+    }
+
+    .menu {
+      padding-top: 5%;
+
+      .menuItem {
+        display: flex;
+        font-family: $typography-primary-light-font-family;
+        font-size: $typography-primary-font-size;
+
+        .containerSettings {
+          display: flex;
+          align-items: center;
+          gap: 15%;
+        }
+
+        .containerLogout {
+          display: flex;
+          align-items: center;
+          gap: 30%;
+        }
+      }
+    }
+  }
+}
+
+.wrapperNone {
+  display: none;
+}

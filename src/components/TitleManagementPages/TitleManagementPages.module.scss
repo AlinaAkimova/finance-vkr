@@ -1,0 +1,27 @@
+@import '../../styles';
+
+.wrapper {
+  background-color: $color-background;
+  overflow-x: hidden;
+  max-width: 100%;
+
+  .titleContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5% 4% 0;
+
+    .title {
+      font-family: $typography-primary-extra-light-font-family;
+      width: max-content;
+      height: 100%;
+      border-radius: 4%;
+      font-size: $typography-subtitle-font-size;
+      font-weight: $typography-title-font-weight;
+    }
+
+    .button {
+      height: 4%;
+    }
+  }
+}

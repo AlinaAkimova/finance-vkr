@@ -1,0 +1,18 @@
+@import '../../styles';
+
+.footer {
+  border-radius: 0 0 4px 4px;
+  background-color: $color-white;
+  border-top: 1px solid $color-box-shadow-3;
+  border-left: 1px solid $color-gray-4;
+  border-right: 1px solid $color-gray-4;
+  border-bottom: 1px solid $color-gray-4;
+
+  .typographyFooter {
+    font-family: $typography-tertiary-ubuntu-light-font-family, sans-serif !important;
+    font-size: $typography-accent-font-size;
+    font-weight: $typography-primary-font-weight;
+    position: relative;
+    top: 5px;
+  }
+}

@@ -1,0 +1,36 @@
+.wrapper {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: orbit;
+  animation-duration: 1.5s;
+}
+
+.loadingWrapper {
+  top: 0;
+}
+
+.tableLoadingWrapper {
+  top: 0;
+}
+
+.logo {
+  width: 30px;
+  margin-left: 6%;
+  rotate: -35deg;
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}

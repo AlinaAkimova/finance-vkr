@@ -1,0 +1,99 @@
+@import 'src/styles';
+
+.box {
+  max-width: 450px;
+  padding: 0 !important;
+
+  .modalContainer {
+    margin: 0 1%;
+  }
+
+  .gridItem {
+    padding-left: 0 !important;
+  }
+
+  .apply {
+    padding-left: 2% !important;
+  }
+
+  .font {
+    font-family: $typography-tertiary-ubuntu-light-font-family;
+    font-size: $typography-primary-font-size;
+  }
+
+  .titleFont {
+    font-size: $typography-title-font-size;
+    font-family: $typography-primary-light-font-family;
+  }
+
+  .header {
+    padding-bottom: 6%;
+    align-items: center;
+
+    .close {
+      color: $color-primary;
+    }
+  }
+
+  .timeFrom {
+    gap: 3%;
+    padding-top: 3% !important;
+  }
+
+  .gridContainer {
+    display: flex;
+    align-items: center;
+    padding: 0 0 2% 2%;
+
+    .orangeText {
+      font-family: $typography-tertiary-ubuntu-light-font-family, sans-serif !important;
+      font-size: $typography-primary-font-size;
+      color: $color-primary;
+      white-space: nowrap;
+    }
+
+    .addIcon {
+      color: $color-primary;
+    }
+  }
+
+  .loading {
+    height: 240px;
+  }
+
+  .list {
+    max-height: 240px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  .list::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  .list::-webkit-scrollbar-thumb {
+    background-color: $color-primary;
+    opacity: 0.3;
+    border-radius: 16px;
+  }
+
+  .buttonBox {
+    display: flex;
+    justify-content: center;
+    height: 50%;
+
+    .buttonWithoutBorders {
+      color: $color-primary;
+      font-family: $typography-secondary-regular-font-family !important;
+    }
+
+    .save {
+      background-color: $color-primary;
+      font-family: $typography-secondary-regular-font-family !important;
+      color: $color-white;
+      width: 100%;
+      padding: 6% 0 6% 0;
+    }
+  }
+}

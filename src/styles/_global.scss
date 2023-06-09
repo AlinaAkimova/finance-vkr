@@ -1,0 +1,286 @@
+@import 'variables';
+@import 'breakpoints';
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+body {
+  font-family: $typography-font-family, Sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+}
+
+strong {
+  font-weight: $typography-accent-font-weight;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+h1 {
+  color: $color-primary;
+  font-size: $typography-primary-font-size;
+  font-weight: $typography-title-font-weight;
+  line-height: $typography-title-line-height;
+
+  @include small-tablet {
+    font-size: 40px;
+  }
+}
+
+h2 {
+  color: $color-primary;
+  font-size: $typography-title-font-size;
+  font-weight: $typography-title-font-weight;
+
+  @include tablet {
+    font-size: 40px;
+  }
+}
+
+h3 {
+  color: $color-secondary;
+  font-size: $typography-subtitle-font-size;
+  font-weight: $typography-subtitle-font-weight;
+}
+
+h4 {
+  color: $color-primary;
+  font-size: $typography-subtitle-font-size;
+  font-weight: $typography-primary-font-weight;
+}
+
+h5 {
+  color: $color-primary;
+  font-size: $typography-accent-font-size;
+  font-weight: $typography-accent-font-weight;
+
+  @include small-tablet {
+    font-size: 18px;
+  }
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0.9rem;
+  overflow-wrap: break-word;
+  color: $color-black-text;
+  font-size: $typography-text-font-size;
+  font-weight: $typography-text-font-weight;
+
+  @include tablet {
+    font-size: 20px;
+  }
+}
+
+a {
+  font-weight: $typography-text-font-weight;
+  color: $color-white;
+  fill: $color-white;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  color: $color-black-text;
+  font-size: $typography-text-font-size;
+  font-weight: $typography-text-font-weight;
+  padding-bottom: 5px;
+  margin-left: 30px;
+
+  p {
+    display: inline;
+  }
+
+  &::before {
+    content: '';
+    background-color: $color-primary;
+    display: inline-block;
+    margin: 2px 15px 2px -30px;
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+  }
+}
+
+input,
+select,
+textarea {
+  font-family: $typography-font-family, Sans-serif;
+  font-size: $typography-text-font-size;
+  font-weight: $typography-text-font-weight;
+}
+
+button {
+  font-size: 30px;
+  font-weight: $typography-primary-font-weight;
+  font-family: $typography-font-family, Sans-serif;
+  background-color: $color-primary;
+  color: $color-white;
+  border: 2px solid $color-primary;
+  border-radius: 15px;
+  padding: 12px 39px;
+  margin: auto;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: $color-white;
+    color: $color-primary;
+
+    a {
+      color: $color-primary;
+    }
+  }
+
+  @include tablet {
+    font-size: 20px;
+  }
+
+  @include small-tablet {
+    padding: 8px 34px;
+    border-radius: 9px;
+  }
+}
+
+button > a {
+  font-weight: 300 !important;
+}
+
+textarea {
+  resize: vertical;
+}
+
+#root {
+  height: 100%;
+}
+
+// Overwriting styles for react-day-picker
+
+.rdp-caption {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rdp-caption_label {
+  font-family: $typography-tertiary-ubuntu-regular-font-family;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.15px;
+  text-transform: uppercase;
+  color: $color-head-1;
+}
+
+.rdp-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+.rdp-nav_button {
+  width: max-content;
+  height: max-content;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+
+  svg {
+    height: 16px;
+    width: 16px;
+    color: $color-profile-background;
+  }
+
+  &:hover {
+    svg {
+      color: $color-primary;
+    }
+  }
+}
+
+.rdp-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.rdp-vhidden {
+  display: none;
+}
+
+.rdp-head {
+  border-bottom: 1px solid $color-box-shadow-3;
+}
+
+.rdp-head_cell {
+  height: 30px;
+
+  font-family: $typography-tertiary-ubuntu-medium-font-family;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.32px;
+  color: $color-profile-background;
+}
+
+.rdp-cell {
+  padding: 0;
+}
+
+.rdp-button {
+  padding: 0;
+
+  font-family: $typography-tertiary-ubuntu-regular-font-family;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.16px;
+  color: $color-head-1;
+
+  width: 100%;
+  height: 36px;
+  border-radius: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.rdp-day_selected {
+  background-color: $color-orange-light-shades-8p;
+}
+
+.rdp-button:hover {
+  background-color: $color-orange-light-shades-8p;
+}
+
+.rdp-day_range_start {
+  border-radius: 6px 0 0 6px;
+}
+
+.rdp-day_range_end {
+  border-radius: 0 6px 6px 0;
+}

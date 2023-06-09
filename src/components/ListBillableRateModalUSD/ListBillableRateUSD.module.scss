@@ -1,0 +1,24 @@
+@import 'src/styles';
+
+.list {
+  max-height: 200px;
+  overflow-y: auto;
+
+  .font {
+    font-family: $typography-tertiary-ubuntu-light-font-family, sans-serif !important;
+    font-size: $typography-secondary-font-size;
+  }
+
+  .gridBox {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+  }
+
+  .chipColor {
+    border-radius: 16px;
+    background-color: $color-purple-1;
+    color: $color-white;
+  }
+}

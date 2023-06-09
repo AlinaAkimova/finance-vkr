@@ -1,0 +1,53 @@
+@import '../../styles';
+
+.wrapper {
+  background-color: $color-background;
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px 60px 40px 40px;
+
+  .upperLevel {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .pageHeader {
+      font-family: $typography-primary-extra-light-font-family;
+      font-size: $typography-subtitle-font-size;
+      font-weight: $typography-title-font-weight;
+      color: $color-black-text;
+    }
+  }
+
+  .navigateItem {
+    width: 100%;
+    background-color: $color-gray-extra-light;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 20px;
+
+    .calendarButtons {
+      display: flex;
+
+      .buttonItem {
+        padding: 5px;
+        margin: 0;
+        border: 0;
+        background-color: $color-background;
+        color: $color-secondary;
+        font-family: $typography-tertiary-ubuntu-regular-font-family;
+        font-size: $typography-secondary-font-size;
+        display: flex;
+        align-items: center;
+        border-radius: 4px;
+        margin-right: 5px;
+        height: max-content;
+        width: max-content;
+      }
+    }
+  }
+}

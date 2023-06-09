@@ -1,0 +1,26 @@
+@import 'src/styles';
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-family: $typography-tertiary-ubuntu-light-font-family, sans-serif !important;
+  font-size: $typography-header-xs-font-size;
+  min-width: 430px;
+
+  .font {
+    font-family: $typography-tertiary-ubuntu-light-font-family, sans-serif !important;
+    font-size: $typography-secondary-font-size;
+  }
+
+  .inviteButton {
+    background-color: $color-primary;
+    color: $color-white;
+    min-width: 90%;
+    margin-top: 20px;
+  }
+}
+
+.nameContainer {
+  margin-bottom: 20px;
+}
