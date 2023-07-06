@@ -46,6 +46,107 @@ export const getNumberByIndexAndPage = (
   return page === 0 ? index + 1 : index + 1 + page * rowsPerPage;
 };
 
+const clients = [
+  {
+    id: '1',
+    director: 'Alina',
+    contactPerson:  'Alina',
+    status: WorkStatusVariant.Active,
+    email: 'google@gmail.com',
+    legalTin: '12345678901',
+    legalOgrn: '12345678901',
+    legalKpp: '12345678901',
+    legalAddress: 'Omsk Lenina street',
+    postalAddress: 'Omsk Lenina street',
+    legalName: 'Neffective',
+    comment: 'aaa',
+    projects: [{
+      id: '1',
+      name: 'superProject',
+      startAt: '01.11.2022',
+      endAt: '01.12.2022',
+      hasActualContract: true,
+      colour: 'red',
+      manager: 'Alina',
+      clientId: '1',
+      contractStatus: 'Active',
+      workStatus: 'Active',
+      contractCurrency: 'RUB',
+      assignedHours: 1234
+    }]
+  },
+  {
+    id: '2',
+    director: 'Maria',
+    contactPerson:  'Maria',
+    status: WorkStatusVariant.Active,
+    email: 'google@gmail.com',
+    legalTin: '12345678901',
+    legalOgrn: '12345678901',
+    legalKpp: '12345678901',
+    legalAddress: 'Omsk Lenina street',
+    postalAddress: 'Omsk Lenina street',
+    legalName: 'Thumbtack',
+    comment: 'aaa',
+    projects: [{ 
+      id: '2',
+      name: 'TalkScanner',
+      startAt: '05.11.2021',
+      endAt: '09.12.2021',
+      hasActualContract: true,
+      colour: 'green',
+      manager: 'Alina',
+      clientId: '2',
+      contractStatus: 'Active',
+      workStatus: 'Active',
+      contractCurrency: 'RUB',
+      assignedHours: 1234
+    },
+    { 
+      id: '3',
+      name: 'MewOwner',
+      startAt: '20.03.2022',
+      endAt: '30.05.2022',
+      hasActualContract: true,
+      colour: 'blue',
+      manager: 'Alina',
+      clientId: '2',
+      contractStatus: 'Active',
+      workStatus: 'Active',
+      contractCurrency: 'RUB',
+      assignedHours: 1234
+    }]
+  },
+  {
+    id: '3',
+    director: 'Alina',
+    contactPerson:  'Alina',
+    status: WorkStatusVariant.Active,
+    email: 'google@gmail.com',
+    legalTin: '12345678901',
+    legalOgrn: '12345678901',
+    legalKpp: '12345678901',
+    legalAddress: 'Omsk Lenina street',
+    postalAddress: 'Omsk Lenina street',
+    legalName: '7Bits',
+    comment: 'aaa',
+    projects: [{ 
+      id: '4',
+      name: 'YandexGo',
+      startAt: '11.01.2019',
+      endAt: '06.04.2022',
+      hasActualContract: true,
+      colour: 'orange',
+      manager: 'Alina',
+      clientId: '3',
+      contractStatus: 'Active',
+      workStatus: 'Active',
+      contractCurrency: 'RUB',
+      assignedHours: 1234
+    }]
+  }
+]
+
 const TableClients: FC<TableViewProps> = ({ activeTab }) => {
   const [page, setPage] = useState<number>(0);
   const [rowsPerPage, setRowsPerPage] = useState<number>(10);
@@ -54,18 +155,6 @@ const TableClients: FC<TableViewProps> = ({ activeTab }) => {
   const [selectedRow, setSelectedRow] = useState<IClient | null>(null);
 
   const { loading, filteredClients, sort, sortDir } = clientsStore;
-
-  const clients = useMemo(() => {
-    if (activeTab === 0) {
-      return filteredClients;
-    }
-
-    if (activeTab === 2) {
-      return filteredClients.filter((client) => client.status === 'Archived');
-    }
-
-    return filteredClients.filter((client) => client.status === 'Active');
-  }, [activeTab, filteredClients]);
 
   useEffect(() => {
     clientsStore.loadClients();

@@ -6,7 +6,6 @@ import Add from '@mui/icons-material/Add';
 import AddClientModal from 'components/modals/AddClientModal';
 import AddMember from 'components/modals/AddMemberModal';
 import AddProjectModal from 'components/modals/AddProjectModal';
-import PlannerPersonModal from 'components/modals/PlannerPersonModal';
 
 // Styles
 import classes from './ButtonView.module.scss';
@@ -48,14 +47,6 @@ const ButtonView: FC<ButtonProps> = ({
       case ButtonLabels.projects:
         return (
           <AddProjectModal isOpen={isButtonClick} setOpen={setIsButtonClick} />
-        );
-      case ButtonLabels.planner:
-        return (
-          <PlannerPersonModal
-            isOpen={isButtonClick}
-            setOpen={setIsButtonClick}
-            title={ButtonLabels.planner}
-          />
         );
       default:
         return null;

@@ -52,6 +52,65 @@ export const getNumberByIndexAndPage = (
   return page === 0 ? index + 1 : index + 1 + page * rowsPerPage;
 };
 
+const projects = [
+  { 
+    id: '1',
+    name: 'superProject',
+    startAt: '01.11.2022',
+    endAt: '01.12.2022',
+    hasActualContract: true,
+    colour: 'purple',
+    manager: 'Alina',
+    clientId: '1',
+    contractStatus: 'Active',
+    workStatus: 'Active',
+    contractCurrency: 'RUB',
+    assignedHours: 1234
+  },
+  { 
+    id: '2',
+    name: 'TalkScanner',
+    startAt: '05.11.2021',
+    endAt: '09.12.2021',
+    hasActualContract: true,
+    colour: 'green',
+    manager: 'Alina',
+    clientId: '2',
+    contractStatus: 'Active',
+    workStatus: 'Active',
+    contractCurrency: 'RUB',
+    assignedHours: 1234
+  },
+  { 
+    id: '3',
+    name: 'MewOwner',
+    startAt: '20.03.2022',
+    endAt: '30.05.2022',
+    hasActualContract: true,
+    colour: 'blue',
+    manager: 'Alina',
+    clientId: '2',
+    contractStatus: 'Active',
+    workStatus: 'Active',
+    contractCurrency: 'RUB',
+    assignedHours: 1234
+  },
+  { 
+    id: '4',
+    name: 'YandexGo',
+    startAt: '11.01.2019',
+    endAt: '06.04.2022',
+    hasActualContract: true,
+    colour: 'orange',
+    manager: 'Alina',
+    clientId: '3',
+    contractStatus: 'Active',
+    workStatus: 'Active',
+    contractCurrency: 'RUB',
+    assignedHours: 1234
+  }
+]
+
 const TableProjects: FC<TableProjectsProps> = ({ activeTab }) => {
   const [page, setPage] = useState<number>(0);
   const [rowsPerPage, setRowsPerPage] = useState<number>(10);
@@ -60,20 +119,6 @@ const TableProjects: FC<TableProjectsProps> = ({ activeTab }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const { loading, filteredProjects, sort, sortDir } = projectsStore;
-  const projects = useMemo(() => {
-    if (activeTab === 0) return filteredProjects;
-
-    if (activeTab === 2)
-      return filteredProjects?.filter(
-        (project) => project.contractStatus === 'Archived'
-      );
-
-    return filteredProjects?.filter(
-      (project) =>
-        project.contractStatus !== 'Archived' &&
-        project.contractStatus !== 'N/A'
-    );
-  }, [activeTab, filteredProjects]);
 
   useEffect(() => {
     clientsStore.loadClients();

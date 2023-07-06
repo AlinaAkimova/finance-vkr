@@ -18,6 +18,7 @@ import membersStore from 'stores/MembersStore';
 
 // Types
 import { User } from 'types/user';
+import { IMemberPatch } from 'types/member';
 import {
   ExpertizeVariant,
   LevelVariant,
@@ -50,7 +51,7 @@ const changeArrow = (sortDir: 1 | -1, active: boolean) => {
   return <DropdownIndicator sortDir={sortDir} active={active} />;
 };
 
-const selectedMembers = (activeTab: number, filteredMembers: User[]) => {
+const selectedMembers = (activeTab: number, filteredMembers: IMemberPatch[]) => {
   switch (activeTab) {
     case 1: {
       return filteredMembers.filter((member) => member.status === 'Active');
@@ -74,6 +75,102 @@ const selectedMembers = (activeTab: number, filteredMembers: User[]) => {
   }
 };
 
+const members = [
+  {
+    id: '1',
+    name: 'Alina',
+    email: 'alina@mail.ru',
+    colour: 'orange',
+    phone: '88005553535',
+    role: 'manager',
+    hasPlanner: true,
+    defaultRate: 456,
+    currency: 'RUB',
+    status: WorkStatusVariant.active,
+    defaultLevel: 'Junior',
+    defaultLegalStatus: 'Employee',
+    defaultWeeklyCapacity: 123,
+    defaultExpertize: 'IOS',
+    workDays: [1, 2, 3, 4],
+    projects: [{ 
+      id: '1',
+      name: 'superProject',
+      startAt: '01.11.2022',
+      endAt: '01.12.2022',
+      hasActualContract: true,
+      colour: 'red',
+      manager: 'Alina',
+      clientId: '1',
+      contractStatus: 'Active',
+      workStatus: 'Active',
+      contractCurrency: 'RUB',
+      assignedHours: 1234
+    }]
+  },
+  {
+    id: '2',
+    name: 'Danila',
+    email: 'danila@mail.ru',
+    colour: 'green',
+    phone: '88005553535',
+    role: 'manager',
+    hasPlanner: true,
+    defaultRate: 456,
+    currency: 'RUB',
+    status: WorkStatusVariant.active,
+    defaultLevel: 'Middle',
+    defaultLegalStatus: 'Employee',
+    defaultWeeklyCapacity: 123,
+    defaultExpertize: 'Backender',
+    workDays: [1, 2, 3, 4],
+    projects: [{ 
+      id: '1',
+      name: 'superProject',
+      startAt: '01.11.2022',
+      endAt: '01.12.2022',
+      hasActualContract: true,
+      colour: 'red',
+      manager: 'Alina',
+      clientId: '1',
+      contractStatus: 'Active',
+      workStatus: 'Active',
+      contractCurrency: 'RUB',
+      assignedHours: 1234
+    }]
+  },
+  {
+    id: '3',
+    name: 'Kate',
+    email: 'kate@mail.ru',
+    colour: 'blue',
+    phone: '88005553535',
+    role: 'manager',
+    hasPlanner: true,
+    defaultRate: 456,
+    currency: 'RUB',
+    status: WorkStatusVariant.active,
+    defaultLevel: 'Junior',
+    defaultLegalStatus: 'Employee',
+    defaultWeeklyCapacity: 123,
+    defaultExpertize: 'Frontend',
+    workDays: [1, 2, 3, 4],
+    projects: [{ 
+      id: '1',
+      name: 'superProject',
+      startAt: '01.11.2022',
+      endAt: '01.12.2022',
+      hasActualContract: true,
+      colour: 'red',
+      manager: 'Alina',
+      clientId: '1',
+      contractStatus: 'Active',
+      workStatus: 'Active',
+      contractCurrency: 'RUB',
+      assignedHours: 1234
+    }]
+  }
+]
+
 const TableTeam: FC<TableTeamProps> = ({ activeTab }) => {
   const [page, setPage] = useState<number>(0);
   const [rowsPerPage, setRowsPerPage] = useState<number>(10);
@@ -82,7 +179,6 @@ const TableTeam: FC<TableTeamProps> = ({ activeTab }) => {
   const [onRowClick, setOnRowClick] = useState<boolean>(false);
 
   const { loading, filteredMembers, sort, sortDir } = membersStore;
-  const members = selectedMembers(activeTab, filteredMembers);
 
   useEffect(() => {
     membersStore.loadMembers();

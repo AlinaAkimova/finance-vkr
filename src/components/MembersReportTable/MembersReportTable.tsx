@@ -29,7 +29,26 @@ const MembersReportTable: FC = () => {
   const [page, setPage] = useState<number>(0);
   const [rowsPerPage, setRowsPerPage] = useState<number>(10);
   const { loading, filteredMembers, sort, sortDir } = membersStore;
-  const members = filteredMembers;
+  const members = [
+    {
+      id: '1',
+      name: 'Alina',
+      colour: 'green',
+      role: 'MANAGER'
+    },
+    {
+      id: '2',
+      name: 'Danila',
+      colour: 'blue',
+      role: 'MANAGER'
+    },
+    {
+      id: '3',
+      name: 'Kate',
+      colour: 'red',
+      role: 'MANAGER'
+    }
+  ]
 
   useEffect(() => {
     membersStore.loadMembers();

@@ -36,7 +36,28 @@ const ProjectsReportsTable: FC = () => {
   const [page, setPage] = useState<number>(0);
   const [rowsPerPage, setRowsPerPage] = useState<number>(10);
   const { loading, filteredProjects, sort, sortDir } = projectsStore;
-  const projects = filteredProjects;
+  const projects = [ 
+    {
+      id: '1',
+      name: 'MewOwner',
+      colour: 'green'
+    },
+    {
+      id: '2',
+      name: 'TalkScanner',
+      colour: 'blue'
+    },
+    {
+      id: '3',
+      name: 'superProject',
+      colour: 'red'
+    },
+    {
+      id: '3',
+      name: 'YandexGo',
+      colour: 'yellow'
+    },
+  ]
 
   useEffect(() => {
     projectsStore.loadProjects();

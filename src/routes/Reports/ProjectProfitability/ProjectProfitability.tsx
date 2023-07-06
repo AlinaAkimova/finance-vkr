@@ -36,7 +36,11 @@ const ProjectProfitability: FC<ProjectProfitabilityInt> = ({
   const getLineData = useCallback(() => {
     return reports ? reports?.data.map((i) => i.totalProfit) : [];
   }, [reports]);
-
+  
+  const arr1 = [
+    15000, 10000, 18000, 19000, 20000, 18000, 22000, 18500, 19000, 15000, 17000,
+    19000, 24000, 5000
+  ];
   return (
     <div>
       <Grid container className={classes.mg}>
@@ -44,7 +48,7 @@ const ProjectProfitability: FC<ProjectProfitabilityInt> = ({
           <BarChart
             title="Project profitability"
             labelsArr={getLabels}
-            data={getLineData()}
+            data={arr1}
           />
         </Grid>
         <Grid item xs={3}>

@@ -34,9 +34,11 @@ const TotalProfit: FC<TotalProfitInt> = ({
     return reports ? reports?.data.map((i) => i.totalProfit) : [];
   }, [reports]);
 
+  const arr1 = [12300, 18500, 22000, 10000, 25000, 23678, 15689];
+
   return (
     <div>
-      <LineChart labelsArr={getLabels} data={getLineData()} />
+      <LineChart labelsArr={getLabels} data={arr1} />
       <div className={classes.rowView}>
         <ReportMoneyCard
           title={CardName.totalMargin}
