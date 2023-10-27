@@ -34,6 +34,7 @@
     "clsx": "^1.1.1",
     "date-fns": "^2.29.3",
     "dayjs": "^1.11.3",
+    "eslint-config-react-app": "^7.0.1",
     "formik": "^2.2.9",
     "i18next": "^21.8.11",
     "interactjs": "^1.10.17",
