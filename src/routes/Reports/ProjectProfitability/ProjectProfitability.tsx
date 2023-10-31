@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useCallback } from 'react';
+import React, { FC, useEffect } from 'react';
 import { Grid } from '@mui/material';
 import { observer } from 'mobx-react-lite';
 
@@ -32,10 +32,6 @@ const ProjectProfitability: FC<ProjectProfitabilityInt> = ({
   useEffect(() => {
     reportsStore.getReportsFromBE(start, end);
   }, [start, end]);
-
-  const getLineData = useCallback(() => {
-    return reports ? reports?.data.map((i) => i.totalProfit) : [];
-  }, [reports]);
   
   const arr1 = [
     15000, 10000, 18000, 19000, 20000, 18000, 22000, 18500, 19000, 15000, 17000,

@@ -40,7 +40,7 @@ const ListBillableRate: FC<IBillableList> = ({ projectId, checked }) => {
 
   useEffect(() => {
     expertiseStore.loadExpertises(projectId);
-  }, []);
+  }, [projectId]);
 
   const dollarChange = (item: IRate) => {
     return (Number(item.rate) / rateStore.rate).toFixed(2);

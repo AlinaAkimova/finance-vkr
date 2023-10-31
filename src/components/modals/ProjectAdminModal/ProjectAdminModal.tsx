@@ -122,15 +122,14 @@ const ProjectAdmin: FC<IProps> = ({ item, isOpen, setOpen }) => {
       colour: colour?.code
     });
   }, [
+    item.id,
     name,
     startAt,
     endAt,
-    isBillable,
     clientId,
     manager,
     contractStatus,
     workStatus,
-    contractCurrency,
     colour
   ]);
 
@@ -146,13 +145,13 @@ const ProjectAdmin: FC<IProps> = ({ item, isOpen, setOpen }) => {
     setContractCurrency(item.contractCurrency);
     setIsBillable(!isBillable);
     setClientLegalName(getClientName(clients, item.clientId));
-  }, [item]);
+  }, [item, clients, isBillable]);
 
   useEffect(() => {
     if (isOpen) {
       handleUpdate();
     }
-  }, [item]);
+  }, [isOpen, handleUpdate]);
 
   useEffect(() => {
     projectsStore.loadProjects();
@@ -167,7 +166,7 @@ const ProjectAdmin: FC<IProps> = ({ item, isOpen, setOpen }) => {
   const clientNameChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     setClientLegalName(e.target.value);
     setClientId(getClientId(clients, e.target.value));
-  }, []);
+  }, [clients]);
 
   const managerChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     setManager(e.target.value);
@@ -217,7 +216,7 @@ const ProjectAdmin: FC<IProps> = ({ item, isOpen, setOpen }) => {
 
   const handleClose = useCallback(() => {
     setOpen((prev) => !prev);
-  }, [isOpen]);
+  }, [setOpen]);
 
   return (
     <Profile isOpen={isOpen} handleClose={handleClose}>

@@ -47,11 +47,11 @@ const MemberProfile: FC<IProps> = ({ item, isOpen, setOpen }) => {
     if (isOpen) {
       handleUpdate();
     }
-  }, [item]);
+  }, [isOpen, handleUpdate]);
 
   const handleClose = useCallback((cIsOpen: boolean) => {
     setOpen(!cIsOpen);
-  }, []);
+  }, [setOpen]);
 
   const takeNameByRow = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     setFullName(e.target.value);

@@ -29,7 +29,7 @@ const App: FC = () => {
     return () => {
       i18n.off('languageChanged', onLanguageChanged);
     };
-  }, []);
+  }, [i18n]);
 
   const theme = useMemo(() => createTheme({}, locales[locale]), [locale]);
 

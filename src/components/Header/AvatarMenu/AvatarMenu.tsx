@@ -32,7 +32,7 @@ const AvatarMenu: FC<AvatarMenuProps> = ({
 
   const closeMenu = useCallback(() => {
     setIsOpen(false);
-  }, []);
+  }, [setIsOpen]);
 
   return (
     <div

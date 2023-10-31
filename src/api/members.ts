@@ -16,7 +16,7 @@ export const getMembers = () => axios.get<IMembersResponse>('/profile/all');
 
 export const refreshMember = async (request: IMemberPatch) =>
   axios.patch<IMemberResponse>('/profile', request).then((response) => {
-    return <User>{
+    return {
       id: response.data.data.id,
       email: response.data.data.email,
       name: response.data.data.name,
@@ -30,5 +30,5 @@ export const refreshMember = async (request: IMemberPatch) =>
       defaultLegalStatus: response.data.data.defaultLegalStatus,
       defaultWeeklyCapacity: response.data.data.defaultWeeklyCapacity,
       defaultExpertize: response.data.data.defaultExpertize
-    };
+    } as User;
   });

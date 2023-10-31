@@ -55,7 +55,7 @@ export const addClient = (client: IAddClient) => {
 
 export const refreshClient = async (request: IClientPatch) =>
   axios.patch<IClientRequest>('/clients', request).then((response) => {
-    return <IClient>{
+    return {
       id: response.data.data.id,
       director: response.data.data.director,
       contactPerson: response.data.data.contactPerson,
@@ -69,5 +69,5 @@ export const refreshClient = async (request: IClientPatch) =>
       legalName: response.data.data.legalName,
       comment: response.data.data.comment,
       projects: response.data.data.projects
-    };
+    } as IClient;
   });

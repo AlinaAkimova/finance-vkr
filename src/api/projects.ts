@@ -42,7 +42,7 @@ interface IProjectResponse {
 export const getProjects = (): Promise<IProject[]> => {
   return axios.get<IProjectsResponse>('/projects').then((response) => {
     return response.data.data.map((project) => {
-      return <IProject>{
+      return {
         id: project.id,
         name: project.name,
         startAt: project.startAt,
@@ -55,7 +55,7 @@ export const getProjects = (): Promise<IProject[]> => {
         workStatus: project.status,
         contractCurrency: project.contractCurrency,
         assignedHours: project.assignedHours
-      };
+      } as IProject;
     });
   });
 };
@@ -78,7 +78,7 @@ export const refreshProject = (
   return axios
     .patch<IProjectResponse>(`/projects/${id}`, request)
     .then((response) => {
-      return <IProject>{
+      return {
         id: response.data.data.id,
         name: response.data.data.name,
         startAt: response.data.data.startAt,
@@ -91,6 +91,6 @@ export const refreshProject = (
         workStatus: response.data.data.status,
         contractCurrency: response.data.data.contractCurrency,
         assignedHours: response.data.data.assignedHours
-      };
+      } as IProject;
     });
 };

@@ -1,4 +1,4 @@
-import React, { FC, useCallback, useEffect, useMemo, useState } from 'react';
+import React, { FC, useCallback, useEffect, useState } from 'react';
 import clsx from 'clsx';
 import { observer } from 'mobx-react-lite';
 
@@ -136,7 +136,7 @@ const TableProjects: FC<TableProjectsProps> = ({ activeTab }) => {
     setSelectedIndex(index);
     setSelectedRow(row);
     setIsOpen(!isOpen);
-  }, []);
+  }, [isOpen]);
 
   return (
     <div className={classes.wrapper}>

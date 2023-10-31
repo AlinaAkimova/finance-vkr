@@ -40,7 +40,7 @@ const SelectCoefficientTextField: FC<SelectCoefficientTextFieldProps> = ({
 
   const options = useMemo(
     () => coefficients.map((i) => (i.name ? `${i.name}` : '')),
-    [coefficients.length]
+    [coefficients]
   );
 
   const handleAddCoefficient = useCallback(() => {

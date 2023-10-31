@@ -28,7 +28,7 @@ const changeArrow = (sortDir: 1 | -1, active: boolean) => {
 const MembersReportTable: FC = () => {
   const [page, setPage] = useState<number>(0);
   const [rowsPerPage, setRowsPerPage] = useState<number>(10);
-  const { loading, filteredMembers, sort, sortDir } = membersStore;
+  const { loading, sort, sortDir } = membersStore;
   const members = [
     {
       id: '1',

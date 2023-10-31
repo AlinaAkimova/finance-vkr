@@ -35,7 +35,7 @@ export const getNumberByIndexAndPage = (
 const ProjectsReportsTable: FC = () => {
   const [page, setPage] = useState<number>(0);
   const [rowsPerPage, setRowsPerPage] = useState<number>(10);
-  const { loading, filteredProjects, sort, sortDir } = projectsStore;
+  const { loading, sort, sortDir } = projectsStore;
   const projects = [ 
     {
       id: '1',

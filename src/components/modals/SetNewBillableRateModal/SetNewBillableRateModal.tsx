@@ -74,7 +74,7 @@ const SetNewBillableRate: FC<IProps> = ({
       rate,
       startAt: startAt?.toISOString()
     });
-  }, [expertise, rate, startAt]);
+  }, [projectId, expertise, rate, startAt]);
 
   const handleUpdate = useCallback(() => {
     if (item) {
@@ -94,7 +94,7 @@ const SetNewBillableRate: FC<IProps> = ({
     if (isOpen && item) {
       handleUpdate();
     }
-  }, [item]);
+  }, [item, isOpen, handleUpdate]);
 
   const expertiseChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     setExpertise(e.target.value);
@@ -106,7 +106,7 @@ const SetNewBillableRate: FC<IProps> = ({
 
   const handleClose = useCallback(() => {
     setOpen((prev) => !prev);
-  }, [isOpen]);
+  }, [setOpen]);
 
   const rubbleExchangeValue = useMemo(() => {
     return (Number(rate) * rateStore.rate).toFixed(2);

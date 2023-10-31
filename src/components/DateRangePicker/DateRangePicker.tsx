@@ -74,7 +74,7 @@ const DateRangePicker: FC<IProps> = ({
 
   const onCancel = useCallback(() => {
     onClose(false);
-  }, []);
+  }, [onClose]);
 
   const onSubmit = () => {
     onDatesRangeChange(range);
@@ -166,7 +166,7 @@ const DateRangePicker: FC<IProps> = ({
       default:
         break;
     }
-  }, []);
+  }, [changeRange]);
 
   return (
     <div>

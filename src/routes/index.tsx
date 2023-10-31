@@ -18,7 +18,7 @@ import Projects from 'routes/Projects';
 import Reports from './Reports';
 
 const Routes: FC = () => {
-  const { isChecking, isLogin } = authStore;
+  const { isChecking } = authStore;
 
   if (isChecking) {
     return <Loading />;

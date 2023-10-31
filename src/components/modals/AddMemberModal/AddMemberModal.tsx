@@ -50,7 +50,7 @@ const AddMember: FC<AddMemberProps> = ({ isOpen, setOpen }) => {
 
   const handleClose = useCallback((cIsOpen: boolean) => {
     setOpen(!cIsOpen);
-  }, []);
+  }, [setOpen]);
 
   const sendLink = () => {
     if (email.length && name.length && role.length) {

@@ -73,7 +73,7 @@ const AddProjectModal: FC<AddProjectModalProps> = ({ isOpen, setOpen }) => {
 
   const closeModal = useCallback(() => {
     setOpen(!isOpen);
-  }, [isOpen]);
+  }, [setOpen, isOpen]);
 
   const changeName = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     setName(e.target.value);

@@ -34,7 +34,7 @@ const TabsView: FC<TabsViewProps> = ({
     (event: SyntheticEvent, newValue: number) => {
       setActiveTab(newValue);
     },
-    []
+    [setActiveTab]
   );
 
   return (

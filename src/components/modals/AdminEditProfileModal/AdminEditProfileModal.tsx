@@ -109,6 +109,8 @@ const AdminEditProfile: FC<IProps> = ({ item, isOpen, setOpen }) => {
       defaultExpertize
     });
   }, [
+    item.colour,
+    item.id,
     name,
     role,
     defaultRate,
@@ -131,18 +133,18 @@ const AdminEditProfile: FC<IProps> = ({ item, isOpen, setOpen }) => {
     setRate(Number(item.defaultRate));
     setWeeklyCapacity(Number(item.defaultWeeklyCapacity));
     setWorkStatus(item.status);
-  }, [item]);
+  }, [item, contractCurrency]);
 
   useEffect(() => {
     if (isOpen) {
       handleUpdate();
     }
-  }, [item]);
+  }, [handleUpdate, isOpen]);
 
   const handleClose = useCallback(() => {
     setOpen((prev) => !prev);
     setIsEdit(true);
-  }, [isOpen]);
+  }, [setOpen]);
 
   const handleEdit = useCallback((cIsEdit: boolean) => {
     setIsEdit(!cIsEdit);
@@ -170,7 +172,7 @@ const AdminEditProfile: FC<IProps> = ({ item, isOpen, setOpen }) => {
 
   useEffect(() => {
     symbolsForAvatar(item.name);
-  }, [item]);
+  }, [symbolsForAvatar, item]);
 
   const emailChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);

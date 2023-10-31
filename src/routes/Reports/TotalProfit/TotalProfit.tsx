@@ -1,4 +1,4 @@
-import React, { FC, useCallback, useEffect } from 'react';
+import React, { FC, useEffect } from 'react';
 import LineChart from 'components/Charts/LineChart';
 import ReportMoneyCard from 'components/ReportMoneyCard/ReportMoneyCard';
 
@@ -29,10 +29,6 @@ const TotalProfit: FC<TotalProfitInt> = ({
   useEffect(() => {
     reportsStore.getReportsFromBE(start, end);
   }, [start, end]);
-
-  const getLineData = useCallback(() => {
-    return reports ? reports?.data.map((i) => i.totalProfit) : [];
-  }, [reports]);
 
   const arr1 = [12300, 18500, 22000, 10000, 25000, 23678, 15689];
 

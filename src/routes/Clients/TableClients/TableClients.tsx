@@ -1,4 +1,4 @@
-import React, { FC, useCallback, useEffect, useMemo, useState } from 'react';
+import React, { FC, useCallback, useEffect, useState } from 'react';
 import clsx from 'clsx';
 import { observer } from 'mobx-react-lite';
 
@@ -154,7 +154,7 @@ const TableClients: FC<TableViewProps> = ({ activeTab }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [selectedRow, setSelectedRow] = useState<IClient | null>(null);
 
-  const { loading, filteredClients, sort, sortDir } = clientsStore;
+  const { loading, sort, sortDir } = clientsStore;
 
   useEffect(() => {
     clientsStore.loadClients();
@@ -164,7 +164,7 @@ const TableClients: FC<TableViewProps> = ({ activeTab }) => {
     setSelectedRow(row);
     setIsOpen(!isOpen);
     setSelectedIndex(index);
-  }, []);
+  }, [isOpen]);
 
   return (
     <div className={classes.wrapper}>

@@ -18,7 +18,6 @@ import membersStore from 'stores/MembersStore';
 
 // Types
 import { User } from 'types/user';
-import { IMemberPatch } from 'types/member';
 import {
   ExpertizeVariant,
   LevelVariant,
@@ -49,30 +48,6 @@ const getNumberByIndexAndPage = (
 
 const changeArrow = (sortDir: 1 | -1, active: boolean) => {
   return <DropdownIndicator sortDir={sortDir} active={active} />;
-};
-
-const selectedMembers = (activeTab: number, filteredMembers: IMemberPatch[]) => {
-  switch (activeTab) {
-    case 1: {
-      return filteredMembers.filter((member) => member.status === 'Active');
-    }
-    case 2: {
-      return filteredMembers.filter((member) => member.status === 'Archived');
-    }
-    case 3: {
-      return filteredMembers.filter(
-        (member) => member.defaultLegalStatus?.toLowerCase() === 'employee'
-      );
-    }
-    case 4: {
-      return filteredMembers.filter(
-        (member) => member.defaultLegalStatus?.toLowerCase() === 'contractor'
-      );
-    }
-    default: {
-      return filteredMembers;
-    }
-  }
 };
 
 const members = [
@@ -178,7 +153,7 @@ const TableTeam: FC<TableTeamProps> = ({ activeTab }) => {
   const [selectedRow, setSelectedRow] = useState<User | null>(null);
   const [onRowClick, setOnRowClick] = useState<boolean>(false);
 
-  const { loading, filteredMembers, sort, sortDir } = membersStore;
+  const { loading, sort, sortDir } = membersStore;
 
   useEffect(() => {
     membersStore.loadMembers();
@@ -188,7 +163,7 @@ const TableTeam: FC<TableTeamProps> = ({ activeTab }) => {
     setSelectedIndex(index);
     setSelectedRow(row);
     setOnRowClick(!onRowClick);
-  }, []);
+  }, [onRowClick]);
 
   return (
     <div className={classes.wrapper}>

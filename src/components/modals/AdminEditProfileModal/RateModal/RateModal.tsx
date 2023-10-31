@@ -95,11 +95,11 @@ const RateModal: FC<RateModalProps> = ({
   const handleClose = useCallback((cIsOpen: boolean) => {
     formik.submitForm();
     setOpen(!cIsOpen);
-  }, []);
+  }, [formik, setOpen]);
 
   useEffect(() => {
     getCoefficients();
-  }, []);
+  }, [getCoefficients]);
 
   return (
     <Profile isOpen={isOpen} handleClose={handleClose}>

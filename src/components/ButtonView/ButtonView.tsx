@@ -30,11 +30,11 @@ const ButtonView: FC<ButtonProps> = ({
 }) => {
   const handleOnClick = useCallback((cIsButtonClick: boolean) => {
     setIsButtonClick(!cIsButtonClick);
-  }, []);
+  }, [setIsButtonClick]);
 
   const handleClose = useCallback(() => {
     setIsButtonClick(false);
-  }, []);
+  }, [setIsButtonClick]);
 
   const getModal = () => {
     switch (label) {

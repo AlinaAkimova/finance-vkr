@@ -48,7 +48,7 @@ const ProjectManagerModal: FC<IProps> = ({ item, isOpen, setOpen }) => {
 
   const handleClose = useCallback((isModalOpen: boolean) => {
     setOpen(!isModalOpen);
-  }, []);
+  }, [setOpen]);
 
   const setNameByRow = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     setProjectName(e.target.value);

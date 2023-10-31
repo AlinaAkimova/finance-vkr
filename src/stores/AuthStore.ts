@@ -1,4 +1,4 @@
-import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
+import axios, { AxiosRequestConfig, AxiosRequestHeaders, AxiosResponse } from 'axios';
 import dayjs, { Dayjs } from 'dayjs';
 import { action, makeObservable, observable, runInAction } from 'mobx';
 import { v4 as uuidv4 } from 'uuid';
@@ -143,7 +143,7 @@ const authStore = new AuthStore();
 
 instance.interceptors.request.use((config) => {
   if (!config.headers) {
-    config.headers = {};
+    config.headers = {} as AxiosRequestHeaders;
   }
 
   config.headers.Authorization = `Bearer ${authStore.accessToken || ''}`;

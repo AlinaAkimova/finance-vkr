@@ -1,5 +1,7 @@
 import rate from './rate';
 
-export default {
+const rateApi = {
   rate
 };
+
+export default rateApi;

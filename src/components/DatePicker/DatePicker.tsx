@@ -20,17 +20,12 @@ const DatePicker: FC<IProps> = ({ date, onChange }) => {
   }, []);
 
   const handleChange = useCallback(
-    (
-      value: ChangeEvent<HTMLInputElement> | null,
-      keyboardInputValue?: string | undefined
-    ) => {
+    (value: ChangeEvent<HTMLInputElement> | null) => {
       if (value) {
         onChange(dayjs(value.toString()));
-      } else if (keyboardInputValue) {
-        onChange(dayjs(keyboardInputValue));
       }
     },
-    []
+    [onChange]
   );
 
   const renderInput = (params: TextFieldProps) => (
@@ -47,21 +42,18 @@ const DatePicker: FC<IProps> = ({ date, onChange }) => {
     <LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={locale}>
       <DesktopDatePicker
         label="Date desktop"
-        inputFormat="PP"
-        value={date}
+        format="PP"
+        value={date as any}
         onChange={handleChange}
         closeOnSelect
-        disableMaskedInput
-        renderInput={renderInput}
-        InputProps={{
-          sx: {
-            '& .MuiInputBase-input': {
-              fontFamily: 'Ubuntu-Light'
-            }
-          }
-        }}
-        components={{
-          OpenPickerIcon: CalendarMonthIcon
+        // slotProps={{
+        //   textField: {
+        //     fontFamily: 'Ubuntu-Light'
+        //   }
+        // }}
+        slots={{
+          openPickerIcon: CalendarMonthIcon,
+          textField: renderInput
         }}
         views={['month', 'day']}
         showDaysOutsideCurrentMonth

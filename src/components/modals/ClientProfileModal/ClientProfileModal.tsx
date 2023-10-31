@@ -122,16 +122,16 @@ const ClientProfile: FC<IProps> = ({ item, isOpen, setOpen }) => {
     if (isOpen) {
       handleUpdate();
     }
-  }, [item]);
+  }, [isOpen, handleUpdate]);
 
   const getFilteredProjects = useMemo(() => {
     return projects.filter((project) => !projectsClient.includes(project));
-  }, [projectsClient]);
+  }, [projects, projectsClient]);
 
   const handleClose = useCallback(() => {
     setOpen((prev) => !prev);
     setIsEdit(true);
-  }, [isOpen]);
+  }, [setOpen, setIsEdit]);
 
   const handleEdit = useCallback((cIsEdit: boolean) => {
     setIsEdit(!cIsEdit);

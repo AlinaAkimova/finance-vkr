@@ -22,14 +22,14 @@ const TableFooter: FC<TablePaginationViewProps> = ({
 }) => {
   const setChangePage = useCallback((event: unknown, newPage: number) => {
     setPage(newPage);
-  }, []);
+  }, [setPage]);
 
   const setChangeRowsPerPage = useCallback(
     (event: React.ChangeEvent<HTMLInputElement>) => {
       setRowsPerPage(+event.target.value);
       setPage(0);
     },
-    []
+    [setPage, setRowsPerPage]
   );
 
   const labelDisplayedRows = (from: number, to: number, count: number) => (

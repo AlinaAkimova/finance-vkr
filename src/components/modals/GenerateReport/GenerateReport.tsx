@@ -25,7 +25,7 @@ interface IProps {
 const GenerateReport: FC<IProps> = ({ isOpen, setOpen }) => {
   const handleClose = useCallback(() => {
     setOpen((prev) => !prev);
-  }, [isOpen]);
+  }, [setOpen]);
   return (
     <Profile isOpen={isOpen}>
       <ThemeProvider theme={theme}>

@@ -43,7 +43,7 @@ const LoggedLayout: FC = () => {
 
   const handleNavigate = useCallback((page: string) => {
     navigate(page);
-  }, []);
+  }, [navigate]);
 
   const handleOpen = useCallback(() => {
     setIsOpen((cIsOpen) => !cIsOpen);
